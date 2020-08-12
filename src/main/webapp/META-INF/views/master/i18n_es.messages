@@ -49,6 +49,8 @@ master.menu.authenticated.notice.list = Avisos
 # master.menu.administrator ###################################################
 
 master.menu.administrator.notice.list = Avisos
+master.menu.administrator.challenge.list = Desafíos
+master.menu.administrator.challenge.create = Nuevo Desafío
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
