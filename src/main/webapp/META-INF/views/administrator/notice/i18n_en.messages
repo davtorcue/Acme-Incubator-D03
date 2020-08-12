@@ -1,0 +1,13 @@
+administrator.notice.list.label.header = Header
+administrator.notice.list.label.title = Title
+administrator.notice.list.label.creationDateTime = Creation Date
+administrator.notice.list.label.deadline = Deadline
+
+administrator.notice.form.label.header = Header
+administrator.notice.form.label.title = Title
+administrator.notice.form.label.creationDateTime = Creation Date
+administrator.notice.form.label.deadline = Deadline
+administrator.notice.form.label.body = Body
+administrator.notice.form.label.optionalLinks = Optional Links
+
+administrator.notice.button.return = Return
