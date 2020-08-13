@@ -40,6 +40,6 @@ public class TechnologyRecord extends DomainEntity {
 	private Integer				stars;
 
 	@NotNull
-	private Boolean				openSource;
+	private boolean				openSource;
 
 }
