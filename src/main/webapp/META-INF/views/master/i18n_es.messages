@@ -50,11 +50,13 @@ master.menu.authenticated.notice.list = Avisos
 
 master.menu.administrator.notice.list = Avisos
 master.menu.administrator.challenge.list = Desafíos
+master.menu.administrator.overture.list = Propuestas
 master.menu.administrator.technologyRecord.list= Registros Tecnologicos
 master.menu.administrator.challenge.create = Nuevo Desafío
 master.menu.administrator.technologyRecord.create = Nuevo Registro Tecnologico
 master.menu.administrator.toolRecord.list= Registros de Herramientas
 master.menu.administrator.toolRecord.create = Nuevo Registro de Herramienta
+master.menu.administrator.overture.create = Nueva Propuesta
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
