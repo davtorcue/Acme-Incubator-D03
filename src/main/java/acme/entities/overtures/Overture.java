@@ -27,7 +27,6 @@ public class Overture extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@PastOrPresent
 	private Date				creation;

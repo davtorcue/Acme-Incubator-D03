@@ -50,8 +50,10 @@ master.menu.authenticated.notice.list = Notices
 
 master.menu.administrator.notice.list = Notices
 master.menu.administrator.challenge.list = Challenges
+master.menu.administrator.overture.list = Overtures
 master.menu.administrator.challenge.create = New Challenge
 master.menu.administrator.technologyRecord.create = New Technology Record
+master.menu.administrator.overture.create = New Overture
 master.menu.administrator.technologyRecord.list = Technology Records
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
