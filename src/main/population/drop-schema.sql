@@ -1,5 +1,4 @@
 
-
     alter table `administrator` 
        drop 
        foreign key FK_2a5vcjo3stlfcwadosjfq49l1;
@@ -31,6 +30,8 @@
     drop table if exists `consumer`;
 
     drop table if exists `inquiry`;
+
+    drop table if exists `notice`;
 
     drop table if exists `overture`;
 

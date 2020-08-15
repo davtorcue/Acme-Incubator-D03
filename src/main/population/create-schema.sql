@@ -1,5 +1,4 @@
 
-
     create table `administrator` (
        `id` integer not null,
         `version` integer not null,
@@ -59,6 +58,18 @@
         `max_money_currency` varchar(255),
         `min_money_amount` double precision,
         `min_money_currency` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `notice` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `creation_date_time` datetime(6),
+        `deadline` datetime(6),
+        `header` varchar(255),
+        `optional_links` varchar(255),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
