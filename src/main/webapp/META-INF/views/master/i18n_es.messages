@@ -54,6 +54,7 @@ master.menu.administrator.overture.list = Propuestas
 master.menu.administrator.technologyRecord.list= Registros Tecnologicos
 master.menu.administrator.challenge.create = Nuevo Desafío
 master.menu.administrator.technologyRecord.create = Nuevo Registro Tecnologico
+master.menu.administrator.notice.create = Nuevo aviso
 master.menu.administrator.toolRecord.list= Registros de Herramientas
 master.menu.administrator.toolRecord.create = Nuevo Registro de Herramienta
 master.menu.administrator.overture.create = Nueva Propuesta

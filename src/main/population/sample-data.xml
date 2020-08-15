@@ -253,7 +253,8 @@
 		<property name="body" value= "Description of body 4"/>
 		<property name="creationDateTime" value= "2014/02/15 15:15"/>
 		<property name="deadline" value= "2019/01/21 14:59"/>
-		<property name="optionalLinks"><null/></property>
+		<property name="optionalLinks" value="http://localhost:8080/acme-incubator/anonymous/notice/show?id=24,
+						http://localhost:8080/acme-incubator/anonymous/notice/show?id=25"/>
 	</bean>
 </beans>
 
