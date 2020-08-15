@@ -54,6 +54,7 @@ master.menu.administrator.overture.list = Overtures
 master.menu.administrator.challenge.create = New Challenge
 master.menu.administrator.technologyRecord.create = New Technology Record
 master.menu.administrator.overture.create = New Overture
+master.menu.administrator.notice.create = New Notice
 master.menu.administrator.technologyRecord.list = Technology Records
 master.menu.administrator.toolRecord.create = New Tool Record
 master.menu.administrator.toolRecord.list = Tool Records

@@ -6,12 +6,13 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import org.hibernate.validator.internal.constraintvalidators.hv.URLValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.web.util.UrlUtils;
 import org.springframework.stereotype.Service;
 
 import acme.entities.notices.Notice;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
@@ -49,14 +50,23 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 
 		request.unbind(entity, model, "header", "title", "body", "deadline", "optionalLinks");
 
+		if (request.isMethod(HttpMethod.GET)) {
+			model.setAttribute("checkbox", "false");
+		} else {
+			request.transfer(model, "checkbox");
+		}
+
 	}
 
 	@Override
 	public Notice instantiate(final Request<Notice> request) {
 		// TODO Auto-generated method stub
 		Notice result;
+		Date creationMoment;
 		result = new Notice();
-		request.getModel().setAttribute("checkbox", false);
+		creationMoment = new Date();
+
+		result.setCreationDateTime(creationMoment);
 
 		return result;
 	}
@@ -78,12 +88,11 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 			date = new Date();
 			errors.state(request, entity.getDeadline().after(date), "deadline", "administrator.notice.error.incorrectDeadline");
 		}
-		if (!errors.hasErrors("optionalLinks")) {
+		if (!errors.hasErrors("optionalLinks") && !entity.getOptionalLinks().isEmpty()) {
 			boolean isURLs;
-			URLValidator urlValidator = new URLValidator();
 			List<String> optLinks = new ArrayList<>();
 			optLinks = Arrays.asList(entity.getOptionalLinks().split(","));
-			isURLs = optLinks.stream().allMatch(x -> urlValidator.isValid(x.trim(), null));
+			isURLs = optLinks.stream().allMatch(x -> UrlUtils.isAbsoluteUrl(x.trim()));
 			errors.state(request, isURLs, "optionalLinks", "administrator.notice.error.NotUrls");
 		}
 
@@ -94,9 +103,9 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 		// TODO Auto-generated method stub
 		Date creationMoment;
 
-		creationMoment = new Date();
-
-		entity.setCreationDateTime(creationMoment);
+		//		creationMoment = new Date();
+		//
+		//		entity.setCreationDateTime(creationMoment);
 		this.repository.save(entity);
 	}
 }

@@ -11,3 +11,9 @@ administrator.notice.form.label.body = Cuerpo
 administrator.notice.form.label.optionalLinks = Enlaces opcionales
 
 administrator.notice.button.return = Volver
+administrator.notice.checkbox.confirmCreate = Confirmar creación
+administrator.notice.form.button.create = Crear
+
+administrator.notice.error.NotUrls = No son URLs válidas
+administrator.notice.error.incorrectDeadline = Debe ser en una fecha futura
+administrator.notice.error.confirmCreate = Debes confirmar la creación
