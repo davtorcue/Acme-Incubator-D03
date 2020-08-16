@@ -41,6 +41,7 @@
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-suboption code="master.menu.administrator.notice.list" action="/administrator/notice/list"/>
+			<acme:menu-suboption code="master.menu.administrator.inquiry.list" action="/administrator/inquiry/list"/>
 			<acme:menu-suboption code="master.menu.administrator.challenge.list" action="/administrator/challenge/list" />
 			<acme:menu-suboption code="master.menu.administrator.technologyRecord.list" action="/administrator/technology-record/list" />
 			<acme:menu-suboption code="master.menu.administrator.overture.list" action="/administrator/overture/list" />
@@ -51,6 +52,7 @@
 			<acme:menu-suboption code="master.menu.administrator.overture.create" action="/administrator/overture/create" access="hasRole('Administrator')"/>
       		<acme:menu-suboption code="master.menu.administrator.toolRecord.create" action="/administrator/tool-record/create" access="hasRole('Administrator')"/>
       		<acme:menu-suboption code="master.menu.administrator.notice.create" action="/administrator/notice/create" access="hasRole('Administrator')"/>
+      		<acme:menu-suboption code="master.menu.administrator.inquiry.create" action="/administrator/inquiry/create" access="hasRole('Administrator')"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>

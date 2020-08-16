@@ -49,12 +49,14 @@ master.menu.authenticated.notice.list = Notices
 # master.menu.administrator ###################################################
 
 master.menu.administrator.notice.list = Notices
+master.menu.administrator.inquiry.list = Inquiries
 master.menu.administrator.challenge.list = Challenges
 master.menu.administrator.overture.list = Overtures
 master.menu.administrator.challenge.create = New Challenge
 master.menu.administrator.technologyRecord.create = New Technology Record
 master.menu.administrator.overture.create = New Overture
 master.menu.administrator.notice.create = New Notice
+master.menu.administrator.inquiry.create = New Inquiry
 master.menu.administrator.technologyRecord.list = Technology Records
 master.menu.administrator.toolRecord.create = New Tool Record
 master.menu.administrator.toolRecord.list = Tool Records

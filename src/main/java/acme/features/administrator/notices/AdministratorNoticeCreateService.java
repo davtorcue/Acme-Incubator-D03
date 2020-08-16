@@ -3,7 +3,9 @@ package acme.features.administrator.notices;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,15 +81,19 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 		assert errors != null;
 
 		boolean isAccepted;
-		Date date;
+		Calendar calendar;
+		Date minimumDeadline;
+
+		if (!errors.hasErrors("deadline")) {
+			calendar = new GregorianCalendar();
+			calendar.add(Calendar.DAY_OF_MONTH, 7);
+			minimumDeadline = calendar.getTime();
+			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "administrator.notice.error.incorrectDeadline");
+		}
 
 		isAccepted = request.getModel().getBoolean("checkbox");
 		errors.state(request, isAccepted, "checkbox", "administrator.notice.error.confirmCreate");
 
-		if (!errors.hasErrors("deadline")) {
-			date = new Date();
-			errors.state(request, entity.getDeadline().after(date), "deadline", "administrator.notice.error.incorrectDeadline");
-		}
 		if (!errors.hasErrors("optionalLinks") && !entity.getOptionalLinks().isEmpty()) {
 			boolean isURLs;
 			List<String> optLinks = new ArrayList<>();
