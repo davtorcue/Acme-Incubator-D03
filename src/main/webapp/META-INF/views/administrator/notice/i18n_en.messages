@@ -15,5 +15,5 @@ administrator.notice.checkbox.confirmCreate = Confirm creation
 administrator.notice.form.button.create = Create
 
 administrator.notice.error.NotUrls = Invalid URLs
-administrator.notice.error.incorrectDeadline = The deadline must be in the future
+administrator.notice.error.incorrectDeadline = Deadline must be at least 7 days ahead
 administrator.notice.error.confirmCreate = You must to confirm the creation
