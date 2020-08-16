@@ -1,7 +1,9 @@
 
 package acme.features.authenticated.overtures;
 
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,7 +42,12 @@ public class AuthenticatedOvertureListService implements AbstractListService<Aut
 
 		assert request != null;
 		Collection<Overture> result;
-		result = this.repository.findManyAll();
+
+		Calendar aux = Calendar.getInstance();
+		Date date2 = new Date();
+		aux.setTime(date2);
+
+		result = this.repository.findManyAllActives(aux.getTime());
 		return result;
 
 	}
