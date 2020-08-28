@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.parameters.Parameter;
 import acme.entities.technologyRecords.TechnologyRecord;
 import acme.framework.repositories.AbstractRepository;
 
@@ -17,5 +18,8 @@ public interface AdministratorTechnologyRecordRepository extends AbstractReposit
 
 	@Query("select t from TechnologyRecord t")
 	Collection<TechnologyRecord> findManyAll();
+
+	@Query("select p from Parameter p")
+	Parameter findParameter();
 
 }
