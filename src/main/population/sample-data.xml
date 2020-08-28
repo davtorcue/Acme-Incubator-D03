@@ -256,5 +256,12 @@
 		<property name="optionalLinks" value="http://localhost:8080/acme-incubator/anonymous/notice/show?id=24,
 						http://localhost:8080/acme-incubator/anonymous/notice/show?id=25"/>
 	</bean>
+	
+	 <!-- Parameter -->
+	<bean id="parameter" class= "acme.entities.parameters.Parameter">
+		<property name= "spamwords" value="sex, hard core, viagra, cialis, nigeria, you`ve won, million dollar, sexo, has ganado, millon de dolares"/>
+		<property name= "spamthreshold" value= "2.5"/>
+		<property value="Technology, Science, Arts, Business, Health" name="activitySector"/>
+	</bean>
 </beans>
 
